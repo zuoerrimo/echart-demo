@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>地图</title>
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js"></script>
+   <script type="text/javascript" src="china.js"></script>
+   <script type="text/javascript" src="map.js"></script>
+
+</head>
+<body>
+   <div id="main" style="width: 600px;height:500px;margin:auto;padding: 10px;"></div>
+   <script type="text/javascript">
+
+ // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+   </script>
+</body>
+</html>

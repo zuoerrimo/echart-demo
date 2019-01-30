@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vpc流量拓扑</title>
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js"></script>
+   <script type="text/javascript" src="vpc.js"></script>
+
+</head>
+<body>
+   <div id="main" style="width: 600px;height:500px;margin:auto;padding: 10px;"></div>
+   <script type="text/javascript">
+     var myChart = echarts.init(document.getElementById('main'));
+     myChart.setOption(option);
+   </script>
+</body>
+</html>
