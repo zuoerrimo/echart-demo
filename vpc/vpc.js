@@ -2,27 +2,26 @@ let nodes = [{
    id: "0",
     name: '未知',
     size: 44,
-    symbol: 'triangle',
-    opacity: 0.1,
+    value:200,
 }, {
     id: "1",
     name: 'vpc-1',
-    color: 'green',
     size: 44,
+    value: 500, 
 }, {
     id: "2",
     name: 'vpc-2',
-    color: 'gray',
+    value: 201,
     size: 24,
 }, {
     id: "3",
     name: 'vpc-3',
-    color: 'pink',
+    value: 1000,
     size: 34,
 }, {
     id: "4",
     name: 'vpc-4',
-    color: 'blue',
+    value: 1005,
     size: 34,
 }]
 
@@ -35,6 +34,7 @@ function genNodes() {
          name: node.name,
          symbol: node.symbol || 'circle',
          symbolSize: node.size,
+         value: node.value,
          label: {
             show: true
         },
@@ -102,6 +102,18 @@ option = {
                 return '悬浮到node'
             }
         },
+    },
+    visualMap: {
+      type: 'continuous',                                                                                                                         
+      min: 200,                                                                      
+      max: 1024,                                                                     
+      text:['1M', '200K'],                                                           
+      realtime: false,                                                               
+      precision: 0.01,                                                               
+      top: 10,                                                                       
+      right: 10,                                                                     
+      calculable : true,
+      color: ['#28004D', '#B15BFF','#BE77FF']  
     },
     animationDurationUpdate: 1500,
     animationEasingUpdate: 'quinticInOut',

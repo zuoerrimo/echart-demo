@@ -1,5 +1,5 @@
 var geoCoordMap = {
-    '上海': [121.4648,31.2891],
+    '上海': [121.4648,0],
     '东莞': [113.8953,22.901],
     '东营': [118.7073,37.5513],
     '中山': [113.4229,22.478],
@@ -239,11 +239,12 @@ option = {
     },
     tooltip : {
         trigger: 'item',
+        backgroundColor: 'lightsteelblue',
         formatter:function(params, ticket, callback){
-            console.log(params);
             if(params.seriesType=="effectScatter") {
-                return params.data.name+"<br/> 总流量："+ params.data.value[2]
-                +"<br/> 总包量："+ params.data.value[2];
+                return '<div style="border-radius: 8px; padding: 8px; font-size: 14px;">' + params.data.name+"<br/> 总流量："+ params.data.value[2]
+                + '<br/><a href="#">查看当前区域的VPC流量</a>' 
+                +"<br/> 总包量："+ params.data.value[2] + '</div>'
              
             }else if(params.seriesType=="lines"){
                 return params.data.fromName+">"+params.data.toName+"<br />"+params.data.value
